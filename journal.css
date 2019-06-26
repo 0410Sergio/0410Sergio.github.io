@@ -1,5 +1,6 @@
 section#main, section#pictures {
     display: table-cell;
+    position: absolute;
     background-color: Azure;
     margin-left: auto;
     margin-right: auto;
@@ -13,6 +14,7 @@ h1,h2 {
     border-bottom: 1px solid black;
 }
 footer {
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
 }
