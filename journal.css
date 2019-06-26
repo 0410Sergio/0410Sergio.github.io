@@ -1,4 +1,4 @@
-body { background-color: Azure;} 
+section#main, section#pictures { background-color: Azure;} 
 p {color: maroon;}
 h1,h2 {font-family: sans-serif;
     color: gray;
