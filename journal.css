@@ -1,7 +1,10 @@
-section, header, aside, article, div, body {
+header, aside, article, div, body {
 
     background-color: Azure;
 } 
+section {
+    vertical-align: top;
+}
 p {
     color: maroon;
 }
