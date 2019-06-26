@@ -1,4 +1,4 @@
-section, header, aside, article {
+section, header, aside, article, div, body {
     position: absolute;
     background-color: Azure;
     margin-left: auto;
