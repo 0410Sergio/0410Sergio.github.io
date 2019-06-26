@@ -2,7 +2,7 @@ header, aside, article, div, body {
 
     background-color: Azure;
 } 
-section {
+section#main {
     vertical-align: top;
 }
 p {
