@@ -1,8 +1,6 @@
 section, header, aside, article, div, body {
 
     background-color: Azure;
-    margin-left: auto;
-    margin-right: auto;
 } 
 p {
     color: maroon;
