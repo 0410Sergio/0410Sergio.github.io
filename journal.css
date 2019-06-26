@@ -1,4 +1,4 @@
-section#main, section#pictures, header, aside, article {
+section#main, header, aside, article {
     display: table-cell;
     position: absolute;
     background-color: Azure;
