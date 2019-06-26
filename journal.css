@@ -1,5 +1,12 @@
-section#main, section#pictures { background-color: Azure;} 
-p {color: maroon;}
-h1,h2 {font-family: sans-serif;
+section#main, section#pictures {
+    display: table-cell;
+    background-color: Azure;
+} 
+p {
+    color: maroon;
+}
+h1,h2 {
+    font-family: sans-serif;
     color: gray;
-    border-bottom: 1px solid black;}
+    border-bottom: 1px solid black;
+}
