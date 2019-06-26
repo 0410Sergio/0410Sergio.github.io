@@ -3,6 +3,8 @@ header, aside, article, div, body {
     background-color: Azure;
 } 
 section#main {
+    display: table-cell;
+    padding: 15px;
     vertical-align: top;
 }
 p {
