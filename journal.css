@@ -11,7 +11,7 @@ p {
     color: maroon;
 }
 h1,h2 {
-    text-align: center;
+    fit-position: center;
     font-family: sans-serif;
     color: gray;
     border-bottom: 1px solid black;
