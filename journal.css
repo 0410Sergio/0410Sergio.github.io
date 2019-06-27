@@ -1,10 +1,10 @@
-header, aside, article, div, body {
+header, aside, article, body {
 
     background-color: Azure;
 } 
-section#main {
-    display: table-cell;
-    padding: 15px;
+div {
+    margin: 50px auto 0;
+    padding: 10px;
     vertical-align: top;
 }
 p {
