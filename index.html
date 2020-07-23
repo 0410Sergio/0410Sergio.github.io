@@ -2,16 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src='endPoint.js'></script>
-    
-
-
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Sudoku Solver</title>
 </head>
 <body>
-    <img id='pic' src='' width= 50% height= 50%></img>
-    
+    <div class= "widget">
+        <input  type="submit" value="Solve Puzzle">
+    </div>
+    <div class="container">      
+        <table id = "myTable">
+            <colgroup>
+                <col id= "col-1">
+                <col id= "col-2">
+                <col id= "col-3">
+                <col id= "col-4">
+                <col id= "col-5">
+                <col id= "col-6">
+                <col id= "col-7"> 
+                <col id= "col-8">
+                <col id= "col-9">
+            </colgroup>
+
+            <tbody>
+                <tr id= "row-1" >
+                    <td class="layer-1 box-1" id="cell-1" ></td>
+                    <td class="layer-2 box-1" id="cell-2"></td>
+                    <td class="layer-3 box-1" id="cell-3"></td>
+                    <td class="layer-4 box-2" id="cell-4"></td>
+                    <td class="layer-5 box-2" id="cell-5"></td>
+                    <td class="layer-6 box-2" id="cell-6"></td>
+                    <td class="layer-7 box-3" id="cell-7"></td>
+                    <td class="layer-8 box-3" id="cell-8"></td>
+                    <td class="layer-9 box-3" id="cell-9"></td>
+                </tr>
+                <tr id= "row-2">
+                    <td class="layer-1 box-1" id="cell-10" ></td>
+                    <td class="layer-2 box-1" id="cell-11"></td>
+                    <td class="layer-3 box-1" id="cell-12"></td>
+                    <td class="layer-4 box-2" id="cell-13"></td>
+                    <td class="layer-5 box-2" id="cell-14"></td>
+                    <td class="layer-6 box-2" id="cell-15"></td>
+                    <td class="layer-7 box-3" id="cell-16"></td>
+                    <td class="layer-8 box-3" id="cell-17"></td>
+                    <td class="layer-9 box-3" id="cell-18"></td>
+                </tr>
+                <tr id= "row-3">
+                    <td class="layer-1 box-1" id="cell-19"></td>
+                    <td class="layer-2 box-1" id="cell-20"></td>
+                    <td class="layer-3 box-1" id="cell-21"></td>
+                    <td class="layer-4 box-2" id="cell-22"></td>
+                    <td class="layer-5 box-2" id="cell-23"></td>
+                    <td class="layer-6 box-2" id="cell-24"></td>
+                    <td class="layer-7 box-3" id="cell-25"></td>
+                    <td class="layer-8 box-3" id="cell-26"></td>
+                    <td class="layer-9 box-3" id="cell-27"></td>
+                </tr>
+                <tr id= "row-4">
+                    <td class="layer-1 box-4" id="cell-28"></td>
+                    <td class="layer-2 box-4" id="cell-29"></td>
+                    <td class="layer-3 box-4" id="cell-30"></td>
+                    <td class="layer-4 box-5" id="cell-31"></td>
+                    <td class="layer-5 box-5" id="cell-32"></td>
+                    <td class="layer-6 box-5" id="cell-33"></td>
+                    <td class="layer-7 box-6" id="cell-34"></td>
+                    <td class="layer-8 box-6" id="cell-35"></td>
+                    <td class="layer-9 box-6" id="cell-36"></td>
+                </tr>
+                <tr id= "row-5">
+                    <td class="layer-1 box-4" id="cell-37"></td>
+                    <td class="layer-2 box-4" id="cell-38"></td>
+                    <td class="layer-3 box-4" id="cell-39"></td>
+                    <td class="layer-4 box-5" id="cell-40"></td>
+                    <td class="layer-5 box-5" id="cell-41"></td>
+                    <td class="layer-6 box-5" id="cell-42"></td>
+                    <td class="layer-7 box-6" id="cell-43"></td>
+                    <td class="layer-8 box-6" id="cell-44"></td>
+                    <td class="layer-9 box-6" id="cell-45"></td>
+                </tr>
+                <tr id= "row-6">
+                    <td class="layer-1 box-4" id="cell-46"></td>
+                    <td class="layer-2 box-4" id="cell-47"></td>
+                    <td class="layer-3 box-4" id="cell-48"></td>
+                    <td class="layer-4 box-5" id="cell-49"></td>
+                    <td class="layer-5 box-5" id="cell-50"></td>
+                    <td class="layer-6 box-5" id="cell-51"></td>
+                    <td class="layer-7 box-6" id="cell-52"></td>
+                    <td class="layer-8 box-6" id="cell-53"></td>
+                    <td class="layer-9 box-6" id="cell-54"></td>
+                </tr>
+                <tr id= "row-7">
+                    <td class="layer-1 box-7" id="cell-55"></td>
+                    <td class="layer-2 box-7" id="cell-56"></td>
+                    <td class="layer-3 box-7" id="cell-57"></td>
+                    <td class="layer-4 box-8" id="cell-58"></td>
+                    <td class="layer-5 box-8" id="cell-59"></td>
+                    <td class="layer-6 box-8" id="cell-60"></td>
+                    <td class="layer-7 box-9" id="cell-61"></td>
+                    <td class="layer-8 box-9" id="cell-62"></td>
+                    <td class="layer-9 box-9" id="cell-63"></td>
+                </tr>
+                <tr id= "row-8">
+                    <td class="layer-1 box-7" id="cell-64"></td>
+                    <td class="layer-2 box-7" id="cell-65"></td>
+                    <td class="layer-3 box-7" id="cell-66"></td>
+                    <td class="layer-4 box-8" id="cell-67"></td>
+                    <td class="layer-5 box-8" id="cell-68"></td>
+                    <td class="layer-6 box-8" id="cell-69"></td>
+                    <td class="layer-7 box-9" id="cell-70"></td>
+                    <td class="layer-8 box-9" id="cell-71"></td>
+                    <td class="layer-9 box-9" id="cell-72"></td>
+                </tr>
+                <tr id= "row-9">
+                    <td class="layer-1 box-7" id="cell-73"></td>
+                    <td class="layer-2 box-7" id="cell-74"></td>
+                    <td class="layer-3 box-7" id="cell-75"></td>
+                    <td class="layer-4 box-8" id="cell-76"></td>
+                    <td class="layer-5 box-8" id="cell-77"></td>
+                    <td class="layer-6 box-8" id="cell-78"></td>
+                    <td class="layer-7 box-9" id="cell-79"></td>
+                    <td class="layer-8 box-9" id="cell-80"></td>
+                    <td class="layer-9 box-9" id="cell-81"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="myData"></div>
+    <script src="main.js"></script>
 </body>
 </html>
