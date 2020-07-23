@@ -1,0 +1,77 @@
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+.container {
+    position:absolute;
+    display:grid;
+    
+    padding-left: 550px;
+    padding-top: 10px;
+     
+}
+td {
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    
+
+}
+.widget {
+    position: relative;
+    padding-left: 770px;
+    padding-top: 100px;
+
+}
+
+#row-1, #row-4, #row-7{
+    border-top: solid 4px;
+}
+
+#row-9 {
+    border-bottom: solid 4px;
+}
+
+#col-1, #col-4, #col-7 {
+    border-left: solid 4px;
+}
+
+#col-9 {
+    border-right: solid 4px;
+}
+
+
+@keyframes blinkingBackground{
+    0%		{ background-color: #f3270c;}
+    25%		{ background-color: #ff0000;}
+
+    75%		{ background-color: #da4141;}
+    100%	{ background-color: #db8282;}
+}
+
+@keyframes blinkingBackgroundTwo{
+    0%		{ background-color: #f1ada4;}
+    25%		{ background-color: #f5bcbc;}
+
+    75%		{ background-color: #f3c2c2;}
+    100%	{ background-color: #eccaca;}
+}
+
+@keyframes blinkingBackgroundThree{
+    0%		{ background-color: #1f60eb;}
+    25%		{ background-color: #1f60eb;}
+
+    75%		{ background-color: #1f60eb;}
+    100%	{ background-color: #1f60eb;}
+}
+
+@keyframes blinkingBackgroundFour{
+    0%		{ background-color: #fce303;}
+    25%		{ background-color: #fce303;}
+
+    75%		{ background-color: #fce303;}
+    100%	{ background-color: #fce303;}
+}
