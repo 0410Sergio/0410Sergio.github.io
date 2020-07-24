@@ -30,8 +30,8 @@ function appendData(data) {
         if(chosenQuiz[i] !== "0") {
             secContainer.innerHTML = chosenQuiz[i];
     }   else{
-            document.getElementById("cell-" + String(i+1)).style.fontFamily = "helvetica";
-            document.getElementById("cell-" + String(i+1)).style.fontSize = "xx-large"; 
+            //document.getElementById("cell-" + String(i+1)).style.fontFamily = "helvetica";
+            //document.getElementById("cell-" + String(i+1)).style.fontSize = "xx-large"; 
     }
     }  
 }
