@@ -1,3 +1,3 @@
 ## A Visualized Sudoku Solver.
 ###
-### Go to [https://dock-home.com](https://dock-home.com) to see it in action
+### Go to [http://dock-home.com](http://dock-home.com) to see it in action
