@@ -38,13 +38,13 @@ function appendData(data) {
 
 $( function() {
     $( ".widget input[type=submit]" ).button();
-    $( "input" ).click( function( event ) {
+    $( "input" ).one('click', function( event ) {
       Starter();
     } );
 });
 
 
-
+let speed =100;
 
 
 let chosenQuiz;
@@ -147,11 +147,11 @@ async function delayedRows() {
     for(var j = 1; j < 10; j++) {
 
         arrayRow = arrayRow.concat(document.getElementById("row-" + numRows).getElementsByClassName("layer-" + j)[0].innerText);
-        document.getElementById("row-" + numRows).getElementsByClassName("layer-" + j)[0].style.animation = "blinkingBackgroundTwo 2s 1";
+        document.getElementById("row-" + numRows).getElementsByClassName("layer-" + j)[0].style.animation = "blinkingBackgroundTwo 1s 1";
         
     }
 
-    await sleep(200);
+    await sleep(100);
     counter = arrayRow.join('').replace(/\s/g,'').split('').length;
     
 
@@ -174,10 +174,10 @@ async function delayedRows() {
         return;
     }
 
-    document.getElementById(rowVal).style.animation = "blinkingBackgroundFour 1s 1"
-    await sleep(500);
+    document.getElementById(rowVal).style.animation = "blinkingBackgroundFour .2s 1"
+    await sleep(100);
     document.getElementById(rowVal).innerText = i;
-    await sleep(500);
+    await sleep(100);
     document.getElementById(rowVal).style.animation = "";
 
     for(var j = 1; j < 10; j++) {
@@ -198,10 +198,10 @@ async function delayedCols() {
 
         arrayCol = arrayCol.concat(document.getElementsByClassName("layer-" + numCols)[i].innerText);
 
-        document.getElementsByClassName("layer-" + numCols)[i].style.animation = "blinkingBackgroundTwo 2s 1";
+        document.getElementsByClassName("layer-" + numCols)[i].style.animation = "blinkingBackgroundTwo 1s 1";
     }
     
-    await sleep(200);
+    await sleep(100);
     counter = arrayCol.join('').replace(/\s/g,'').split('').length;
     
 
@@ -220,10 +220,10 @@ async function delayedCols() {
         numCols++;
         return;
     }
-    document.getElementById(colVal).style.animation = "blinkingBackgroundFour 1s 1";
-    await sleep(500);
+    document.getElementById(colVal).style.animation = "blinkingBackgroundFour .2s 1";
+    await sleep(100);
     document.getElementById(colVal).innerText = i;
-    await sleep(500);
+    await sleep(100);
     console.log(colVal);
     
     document.getElementById(colVal).style.animation = "";
@@ -245,10 +245,10 @@ async function delayedBoxes() {
 
         arrayBox = arrayBox.concat(document.getElementsByClassName("box-" + numBoxes)[i].innerText);
 
-        document.getElementsByClassName("box-" + numBoxes)[i].style.animation = "blinkingBackgroundTwo 2s 1";
+        document.getElementsByClassName("box-" + numBoxes)[i].style.animation = "blinkingBackgroundTwo 1s 1";
     }
     
-    await sleep(200);
+    await sleep(100);
     counter = arrayBox.join('').replace(/\s/g,'').split('').length;
     
 
@@ -267,10 +267,10 @@ async function delayedBoxes() {
         numBoxes++;
         return;
     }
-    document.getElementById(boxVal).style.animation = "blinkingBackgroundFour 1s 1";
-    await sleep(500);
+    document.getElementById(boxVal).style.animation = "blinkingBackgroundFour .2s 1";
+    await sleep(100);
     document.getElementById(boxVal).innerText = i;
-    await sleep(500);
+    await sleep(100);
     console.log(boxVal);
     
     document.getElementById(boxVal).style.animation = "";
